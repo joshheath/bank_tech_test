@@ -1,7 +1,7 @@
 class Account
 
   def initialize
-    @statement = []
+    @statement = [0]
   end
 
   def credit(amount)
