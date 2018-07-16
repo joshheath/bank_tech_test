@@ -2,20 +2,17 @@ require 'account'
 
 describe Account do
   it 'can display a bank statement' do
-    account = Account.new
-    expect(account.balance).to eq 0
+    expect(subject.balance).to eq 0
   end
 
   it 'can accept credit' do
-    account = Account.new
-    account.credit(1000)
-    expect(account.balance).to eq 1000
+    subject.credit(1000)
+    expect(subject.balance).to eq 1000
   end
 
   it "can debit the account" do
-    account = Account.new
-    account.credit(1000)
-    account.debit(500)
-    expect(account.balance).to eq 500
+    subject.credit(1000)
+    subject.debit(500)
+    expect(subject.balance).to eq 500
   end
 end

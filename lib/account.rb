@@ -12,7 +12,6 @@ class Account
     @balance -= amount
   end
 
-
   def balance
     return @balance
   end
