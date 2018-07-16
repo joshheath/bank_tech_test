@@ -1,10 +1,15 @@
 require_relative 'account'
 
 class Statement
+  # attr_accessor :ledger
 
   def initialize
-    @statement = []
+    @ledger = []
   end
 
+  def add(amount)
+    # ledger = []
+    @ledger << amount
+  end
 
 end
