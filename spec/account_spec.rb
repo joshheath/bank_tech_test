@@ -6,13 +6,15 @@ describe Account do
   end
 
   it 'can accept credit' do
-    subject.credit(1000)
+    date = Time.new(2018, 7, 15).strftime("%d/%m/%Y")
+    subject.credit(1000, date)
     expect(subject.balance).to eq 1000
   end
 
   it "can debit the account" do
-    subject.credit(1000)
-    subject.debit(500)
+    date = Time.new(2018, 7, 15).strftime("%d/%m/%Y")
+    subject.credit(1000, date)
+    subject.debit(500, date)
     expect(subject.balance).to eq 500
   end
 end
