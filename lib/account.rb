@@ -1,14 +1,14 @@
 class Account
 
   def initialize
-    @statement = [0]
+    @balance = 0
   end
 
   def credit(amount)
-    @statement << amount
+    @balance += amount
   end
 
   def balance
-    return @statement
+    return @balance
   end
 end
