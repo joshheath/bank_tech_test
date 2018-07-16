@@ -14,6 +14,8 @@ describe Account do
 
   it "can debit the account" do
     account = Account.new
-
+    account.credit(1000)
+    account.debit(500)
+    expect(account.balance).to eq 500
   end
 end

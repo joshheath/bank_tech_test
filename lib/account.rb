@@ -8,6 +8,11 @@ class Account
     @balance += amount
   end
 
+  def debit(amount)
+    @balance -= amount
+  end
+
+
   def balance
     return @balance
   end
