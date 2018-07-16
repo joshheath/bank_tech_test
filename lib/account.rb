@@ -9,7 +9,7 @@ class Account
 
   def credit(amount, date)
     @balance += amount
-    
+    @statement.add_transaction({ date: date, credit: amount, debit: "", balance: @balance })
   end
 
   def debit(amount, date)
