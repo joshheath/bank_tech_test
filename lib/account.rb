@@ -1,7 +1,9 @@
 class Account
+  attr_accessor :ledger
 
   def initialize
     @balance = 0
+    @ledger = []
   end
 
   def credit(amount)

@@ -42,3 +42,7 @@ User stories
 3. As a bank customer
   So I can keep track of my money
   I can see my bank account activity with dates
+
+Tests
+
+Account_spec tests aim to test basic functionality and to keep a track of the account balance
