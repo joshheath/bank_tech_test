@@ -9,7 +9,7 @@ class Account
 
   def credit(amount, date)
     @balance += amount
-
+    
   end
 
   def debit(amount, date)

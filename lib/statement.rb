@@ -7,8 +7,12 @@ class Statement
     @ledger = []
   end
 
-  def credit_ledger(amount)
-    @ledger << amount.to_s
+  # def credit_ledger(amount)
+  #   @ledger << amount.to_s
+  # end
+
+  def add_transaction(transaction)
+    @ledger << transaction
   end
 
   def header
