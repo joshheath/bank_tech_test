@@ -15,4 +15,5 @@ class Account
   def balance
     return @balance
   end
+
 end
