@@ -1,9 +1,8 @@
-class Account
-  attr_accessor :ledger
+require_relative 'statement'
 
-  def initialize
+class Account
+  def initialize(statement = Statement.new)
     @balance = 0
-    @ledger = []
   end
 
   def credit(amount)
@@ -17,5 +16,4 @@ class Account
   def balance
     return @balance
   end
-
 end

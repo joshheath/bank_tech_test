@@ -10,4 +10,9 @@ class Statement
   def credit_ledger(amount)
     @ledger << amount.to_s
   end
+
+  def header
+    p "date || credit || debit || balance"
+  end
+
 end
