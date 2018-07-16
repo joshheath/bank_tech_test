@@ -4,7 +4,7 @@ class Account
     @statement = []
   end
 
-  def deposit(amount)
+  def credit(amount)
     @statement << amount
   end
 
