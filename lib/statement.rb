@@ -5,9 +5,10 @@ class Statement
 
   def initialize
     @ledger = []
+    @date = Time.now.strftime("%d/%m/%Y")
   end
 
-  def add_transaction(transaction)
+  def add(transaction)
     @ledger << transaction
   end
 
@@ -17,7 +18,7 @@ class Statement
 
   def print
     header = "date || credit || debit || balance"
-    ledger.reverse_each do |entry|
+    @ledger.reverse_each do |entry|
       header << "\n "
       entry.each do |k, _v|
         header << "#{entry[k]} || "
