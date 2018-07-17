@@ -17,7 +17,7 @@ class Statement
 
   def print
     header = "date || credit || debit || balance"
-    ledger.each do |entry|
+    ledger.reverse_each do |entry|
       header << "\n "
       entry.each do |k, _v|
         header << "#{entry[k]} || "

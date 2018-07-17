@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T09:47:30+01:00">2018-07-17T09:47:30+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T09:52:58+01:00">2018-07-17T09:52:58+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.15%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.37
+         1.68
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>54</b> relevant lines. 
-    <span class="green"><b>53</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>58</b> relevant lines. 
+    <span class="green"><b>58</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#ddf86b8463766f7265fa91c55c43d55af04f6372" class="src_link" title="lib/statement.rb">lib/statement.rb</a></td>
-        <td class="green strong">93.75 %</td>
+        <td class="green strong">100.0 %</td>
         <td>28</td>
         <td>16</td>
-        <td>15</td>
-        <td>1</td>
-        <td>1.6</td>
+        <td>16</td>
+        <td>0</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#5216e1a99ff3ae82de7efa0815f86c337595eb71" class="src_link" title="spec/statement_spec.rb">spec/statement_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>12</td>
-        <td>12</td>
+        <td>30</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -260,11 +260,11 @@
         <div class="source_table" id="ddf86b8463766f7265fa91c55c43d55af04f6372">
   <div class="header">
     <h3>lib/statement.rb</h3>
-    <h4><span class="green">93.75 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>16</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -307,8 +307,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
           
           <code class="ruby">    @ledger = []</code>
         </li>
@@ -331,8 +331,8 @@
           <code class="ruby">  def add_transaction(transaction)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
           <code class="ruby">    @ledger &lt;&lt; transaction</code>
         </li>
@@ -355,8 +355,8 @@
           <code class="ruby">  def header</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">    p &quot;date || credit || debit || balance&quot;</code>
         </li>
@@ -379,32 +379,32 @@
           <code class="ruby">  def print</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    header = &quot;date || credit || debit || balance&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
-          <code class="ruby">    ledger.each do |entry|</code>
+          <code class="ruby">    ledger.reverse_each do |entry|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
           <code class="ruby">      header &lt;&lt; &quot;\n &quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
           <code class="ruby">      entry.each do |k, _v|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="23">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="23">
+          <span class="hits">12</span>
           
           <code class="ruby">        header &lt;&lt; &quot;#{entry[k]} || &quot;</code>
         </li>
@@ -421,8 +421,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="26">
+          <span class="hits">2</span>
           
           <code class="ruby">    header</code>
         </li>
@@ -594,8 +594,8 @@
     <h3>spec/statement_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -678,7 +678,7 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(subject.print(header)).to eq &quot;date || credit || debit || balance&quot;</code>
+          <code class="ruby">    expect(subject.header).to eq &quot;date || credit || debit || balance&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -724,6 +724,60 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;presents transactions with the most recent at the top&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    subject.add_transaction(date: date, credit: 1000, debit: &quot;&quot;, balance: 1000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    subject.add_transaction(date: date, credit: &quot;&quot;, debit: 500, balance: 500)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(subject.print).to eq %Q(date || credit || debit || balance\n 16/07/2018 ||  || 500 || 500 || \n 16/07/2018 || 1000 ||  || 1000 || )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>
