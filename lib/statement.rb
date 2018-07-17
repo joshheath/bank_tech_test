@@ -1,25 +1,14 @@
-require_relative 'account'
+# require_relative 'account'
+# require_relative 'printer'
 
 class Statement
-  attr_accessor :ledger
+  attr_reader :ledger, :balance, :statement
 
   def initialize
     @ledger = []
-    @date = Time.now.strftime("%d/%m/%Y")
   end
 
   def add(transaction)
-    self.ledger << transaction
-  end
-
-  def print
-    header = "date || credit || debit || balance"
-    @ledger.reverse_each do |entry|
-      header << "\n "
-      entry.each do |k, _v|
-        header << "#{entry[k]} || "
-      end
-    end
-    header
+    @ledger << transaction
   end
 end
