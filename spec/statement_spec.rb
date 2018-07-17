@@ -9,10 +9,6 @@ describe Statement do
     expect(subject.ledger).to eq [{ date: date, credit: 1000, debit: 0, balance: 1000 }]
   end
 
-  # it 'prints the top row of the statement' do
-  #   expect(subject.header).to eq "date || credit || debit || balance"
-  # end
-
   it "can print out the header and transaction" do
     subject.add(date: date, credit: 1000, debit: 0, balance: 1000)
 

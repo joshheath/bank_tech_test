@@ -9,12 +9,8 @@ class Statement
   end
 
   def add(transaction)
-    @ledger << transaction
+    self.ledger << transaction
   end
-
-  # def header
-  #   p "date || credit || debit || balance"
-  # end
 
   def print
     header = "date || credit || debit || balance"

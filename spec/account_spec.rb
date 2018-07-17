@@ -9,8 +9,8 @@ describe Account do
   end
 
   it 'can credit the balance' do
-    subject.credit(date, 1000)
-    expect(subject.balance).to eq 1000
+    subject.credit(date, 990)
+    expect(subject.balance).to eq 990
   end
 
   it "can debit the balance" do
