@@ -11,12 +11,12 @@ class Account
 
   def credit(date, amount)
     @balance += amount
-    @statement.ledger.push({ date: @date, credit: amount, debit: "", balance: @balance })
+    @statement.ledger.push({ date: @date, credit: amount, debit: 0, balance: @balance })
   end
 
   def debit(date, amount)
     @balance -= amount
-    @statement.add({ date: @date, credit: "", debit: amount, balance: @balance })
+    @statement.add({ date: @date, credit: 0, debit: amount, balance: @balance })
   end
 
   def balance

@@ -12,9 +12,9 @@ class Statement
     @ledger << transaction
   end
 
-  def header
-    p "date || credit || debit || balance"
-  end
+  # def header
+  #   p "date || credit || debit || balance"
+  # end
 
   def print
     header = "date || credit || debit || balance"

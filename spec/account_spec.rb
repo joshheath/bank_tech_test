@@ -22,6 +22,6 @@ describe Account do
   it "adds credit to the statement ledger" do
     subject.credit(date, 750)
     subject.debit(date, 500)
-    expect(subject.statement.ledger).to eq [{ date: date, credit: 750, debit: "", balance: 750 }, { date: date, credit: "", debit: 500, balance: 250 }]
+    expect(subject.statement.ledger).to eq [{ date: date, credit: 750, debit: 0, balance: 750 }, { date: date, credit: 0, debit: 500, balance: 250 }]
   end
 end
