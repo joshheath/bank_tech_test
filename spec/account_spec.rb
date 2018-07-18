@@ -1,8 +1,10 @@
 require 'account'
-require 'statement'
 
 describe Account do
   date = Time.new(2018, 7, 18).strftime("%d/%m/%Y")
+
+  let(:printer) { double :printer, print_statement:
+    "date || credit || debit || balance\n 18/07/2018 || 750.00 ||  || 750.00" }
 
   it 'displays a starting balance of zero' do
     expect(subject.balance).to eq 0
@@ -19,9 +21,9 @@ describe Account do
     expect(subject.balance).to eq 500.00
   end
 
-  it "adds credit to the statement ledger" do
-    subject.credit(750.00)
-    subject.debit(500.00)
-    expect(subject.statement.ledger).to eq [{ date: date, credit: 750.00, debit: 0, balance: 750.00 }, { date: date, credit: 0, debit: 500.00, balance: 250.00 }]
+  it "adds transactions to the statement" do
+    subject.credit(750)
+    subject.debit(500)
+    expect(subject.produce_statement).to eq [{:date=>"18/07/2018", :credit=>"750.00", :debit=>0, :balance=>"750.00"}, {:date=>"18/07/2018", :credit=>0, :debit=>"500.00", :balance=>"250.00"}]
   end
 end

@@ -3,10 +3,12 @@
     "coverage": {
       "/Users/joshuaheath/Documents/Coding/week_10/bank_tech_test/spec/account_spec.rb": [
         1,
-        1,
         null,
         1,
         1,
+        null,
+        1,
+        null,
         null,
         1,
         1,
@@ -55,7 +57,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -90,9 +92,9 @@
         1,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        3,
         null,
         null,
         null
@@ -127,6 +129,6 @@
         null
       ]
     },
-    "timestamp": 1531904859
+    "timestamp": 1531906428
   }
 }
