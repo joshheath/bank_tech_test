@@ -42,7 +42,10 @@ Account
   displays a starting balance of zero
   can credit the balance
   can debit the balance
-  adds credit to the statement ledger (FAILED - 1)
+date || credit || debit || balance
+18/07/2018 || 0 || 500.00 || 250.00
+18/07/2018 || 750.00 || 0 || 750.00
+  adds credit to the statement ledger
 
 Printer
 date || credit || debit || balance
@@ -51,6 +54,12 @@ date || credit || debit || balance
 
 Statement
   adds transactions to the ledger
+
+Finished in 0.00364 seconds (files took 0.39912 seconds to load)
+6 examples, 0 failures
+
+
+COVERAGE: 100.00% -- 67/67 lines in 6 files
 ```
 ## Running the code
 
