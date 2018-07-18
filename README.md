@@ -24,16 +24,16 @@ Acceptance criteria
 
 Before writing any code, I produced three user stories to describe the functionality required from the criteria as follows:
 
-> As a bank customer
-> So I can keep my money safe
-> I can make deposits into my bank account
+> As a bank customer  
+> So I can keep my money safe  
+> I can make deposits into my bank account  
 
-> As a bank customer
-> So I can use my money
+> As a bank customer  
+> So I can use my money  
 > I can make withdrawals from my bank account
 
-> As a bank customer
-> So I can keep track of my money
+> As a bank customer  
+> So I can keep track of my money  
 > I can see my bank account activity with dates
 
 ## Tests
