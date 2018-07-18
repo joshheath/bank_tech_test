@@ -1,7 +1,6 @@
 require 'account'
 
 describe Account do
-  date = Time.new(2018, 7, 18).strftime("%d/%m/%Y")
 
   let(:printer) { double :printer, print_statement:
     "date || credit || debit || balance\n 18/07/2018 || 750.00 ||  || 750.00" }
