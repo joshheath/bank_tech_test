@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-18T09:40:47+01:00">2018-07-18T09:40:47+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-18T10:07:39+01:00">2018-07-18T10:07:39+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.5
+         1.56
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>20</td>
         <td>19</td>
         <td>1</td>
-        <td>2.1</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -233,7 +233,7 @@
         <li class="covered" data-hits="3" data-linenumber="16">
           <span class="hits">3</span>
           
-          <code class="ruby">    @statement.add({ date: @date, credit: number_format(amount), debit: 0, balance: @balance })</code>
+          <code class="ruby">    @statement.add({ date: @date, credit: number_format(amount), debit: 0, balance: number_format(@balance) })</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -263,7 +263,7 @@
         <li class="covered" data-hits="2" data-linenumber="21">
           <span class="hits">2</span>
           
-          <code class="ruby">    @statement.add({ date: @date, credit: 0, debit: number_format(amount), balance: @balance })</code>
+          <code class="ruby">    @statement.add({ date: @date, credit: 0, debit: number_format(amount), balance: number_format(@balance) })</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -320,8 +320,8 @@
           <code class="ruby">  def number_format(amount)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="31">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="10" data-linenumber="31">
+          <span class="hits">10</span>
           
           <code class="ruby">    sprintf(&#39;%.2f&#39;,amount)</code>
         </li>
@@ -892,7 +892,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(subject.ledger).to eq [{ date: date, credit: 1000, debit: 0, balance: 1000 }]</code>
+          <code class="ruby">    expect(subject.ledger).to eq [{ date: date, credit: 1000, debit: 0, balance: 1000.00 }]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">

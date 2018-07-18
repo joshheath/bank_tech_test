@@ -1,15 +1,6 @@
 #Bank tech test - Makers week 10
 
-Bank tech test
-Today, you'll practice doing a tech test.
-
-For most tech tests, you'll essentially have unlimited time. This practice session is about producing the best code you can when there is a minimal time pressure.
-
-You'll get to practice your OO design and TDD skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
-
-Specification
+##Specification
 
 Requirements
 - You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -24,25 +15,53 @@ Acceptance criteria
 - When she prints her bank statement
 - Then she would see
 
-date       || credit  || debit  || balance
-14/01/2012 ||         || 500.00 || 2500.00
-13/01/2012 || 2000.00 ||        || 3000.00
-10/01/2012 || 1000.00 ||        || 1000.00
+>date || credit || debit || balance
+>14/01/2012 || || 500.00 || 2500.00
+>13/01/2012 || 2000.00 ||  || 3000.00
+>10/01/2012 || 1000.00 ||  || 1000.00
 
-User stories
+##User stories
 
-1. As a bank customer
-  So I can keep my money safe
-  I can make deposits into my bank account
+Before writing any code, I produced three user stories to describe the functionality required from the criteria as follows:
 
-2. As a bank customer
-  So I can use my money
-  I can make withdrawals from my bank account
+>As a bank customer
+>So I can keep my money safe
+>I can make deposits into my bank account
 
-3. As a bank customer
-  So I can keep track of my money
-  I can see my bank account activity with dates
+>As a bank customer
+>So I can use my money
+>I can make withdrawals from my bank account
 
-Tests
+>As a bank customer
+>So I can keep track of my money
+>I can see my bank account activity with dates
 
-Account_spec tests aim to test basic functionality and to keep a track of the account balance
+##Tests
+```
+Account
+  displays a starting balance of zero
+  can credit the balance
+  can debit the balance
+  adds credit to the statement ledger (FAILED - 1)
+
+Printer
+date || credit || debit || balance
+18/07/2018 || 1000 || 0 || 1000
+  can print the statement
+
+Statement
+  adds transactions to the ledger
+```
+##Running the code
+
+1. Clone this repository
+2. In terminal:
+  - Install gems using `bundle install`
+  - Open `irb`
+  - Type `require './lib/account.rb'`
+
+##Notes on code structure
+- I began by creating basic balance functionality in the Account class, allowing the 'credit' and 'debit' methods to update the balance.
+- I then created the Statement class, to keep track of transactions and added to the 'credit' and 'debit' methods to allow them to push input into the array ('ledger').
+- The Printer class was produced last, in order to format the contents of the Statement to appear as required by the criteria.
+- By having three separate classes, it should be able to make changes to one without requiring changes be made to the others.  
