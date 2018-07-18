@@ -1,6 +1,6 @@
-#Bank tech test - Makers week 10
+# Bank tech test - Makers week 10
 
-##Specification
+## Specification
 
 Requirements
 - You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -15,28 +15,28 @@ Acceptance criteria
 - When she prints her bank statement
 - Then she would see
 
->date || credit || debit || balance
->14/01/2012 || || 500.00 || 2500.00
->13/01/2012 || 2000.00 ||  || 3000.00
->10/01/2012 || 1000.00 ||  || 1000.00
+> date || credit || debit || balance
+> 14/01/2012 || || 500.00 || 2500.00
+> 13/01/2012 || 2000.00 ||  || 3000.00
+> 10/01/2012 || 1000.00 ||  || 1000.00
 
-##User stories
+## User stories
 
 Before writing any code, I produced three user stories to describe the functionality required from the criteria as follows:
 
->As a bank customer
->So I can keep my money safe
->I can make deposits into my bank account
+> As a bank customer
+> So I can keep my money safe
+> I can make deposits into my bank account
 
->As a bank customer
->So I can use my money
->I can make withdrawals from my bank account
+> As a bank customer
+> So I can use my money
+> I can make withdrawals from my bank account
 
->As a bank customer
->So I can keep track of my money
->I can see my bank account activity with dates
+> As a bank customer
+> So I can keep track of my money
+> I can see my bank account activity with dates
 
-##Tests
+## Tests
 ```
 Account
   displays a starting balance of zero
@@ -52,7 +52,7 @@ date || credit || debit || balance
 Statement
   adds transactions to the ledger
 ```
-##Running the code
+## Running the code
 
 1. Clone this repository
 2. In terminal:
@@ -60,7 +60,7 @@ Statement
   - Open `irb`
   - Type `require './lib/account.rb'`
 
-##Notes on code structure
+## Notes on code structure
 - I began by creating basic balance functionality in the Account class, allowing the 'credit' and 'debit' methods to update the balance.
 - I then created the Statement class, to keep track of transactions and added to the 'credit' and 'debit' methods to allow them to push input into the array ('ledger').
 - The Printer class was produced last, in order to format the contents of the Statement to appear as required by the criteria.
