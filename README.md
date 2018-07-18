@@ -69,6 +69,30 @@ COVERAGE: 100.00% -- 67/67 lines in 6 files
   - Open `irb`
   - Type `require './lib/account.rb'`
 
+Below is a screenshot of the code running:
+
+```
+➜  bank_tech_test git:(master) ✗ irb
+2.5.1 :001 > require './lib/account.rb'
+ => true
+2.5.1 :002 > account = Account.new
+ => #<Account:0x00007f90afa08f88 @balance=0, @date="18/07/2018", @statement=#<Statement:0x00007f90afa08f60 @ledger=[]>, @printer=#<Printer:0x00007f90afa08f10>>
+2.5.1 :003 > account.credit(100)
+ => [{:date=>"18/07/2018", :credit=>"100.00", :debit=>0, :balance=>"100.00"}]
+2.5.1 :004 > account.credit(750)
+ => [{:date=>"18/07/2018", :credit=>"100.00", :debit=>0, :balance=>"100.00"}, {:date=>"18/07/2018", :credit=>"750.00", :debit=>0, :balance=>"850.00"}]
+2.5.1 :005 > account.debit(500)
+ => [{:date=>"18/07/2018", :credit=>"100.00", :debit=>0, :balance=>"100.00"}, {:date=>"18/07/2018", :credit=>"750.00", :debit=>0, :balance=>"850.00"}, {:date=>"18/07/2018", :credit=>0, :debit=>"500.00", :balance=>"350.00"}]
+2.5.1 :006 > account.produce_statement
+date || credit || debit || balance
+18/07/2018 || 0 || 500.00 ||  350.00
+18/07/2018 || 750.00 || 0 ||  850.00
+18/07/2018 || 100.00 || 0 ||  100.00
+ => [{:date=>"18/07/2018", :credit=>"100.00", :debit=>0, :balance=>"100.00"}, {:date=>"18/07/2018", :credit=>"750.00", :debit=>0, :balance=>"850.00"}, {:date=>"18/07/2018", :credit=>0, :debit=>"500.00", :balance=>"350.00"}]
+2.5.1 :007 >
+
+```
+
 ## Notes on code structure
 - I began by creating basic balance functionality in the Account class, allowing the 'credit' and 'debit' methods to update the balance.
 - I then created the Statement class, to keep track of transactions and added to the 'credit' and 'debit' methods to allow them to push input into the array ('ledger').
