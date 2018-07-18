@@ -57,6 +57,13 @@
         1,
         0,
         null,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
         null
       ],
       "/Users/joshuaheath/Documents/Coding/week_10/bank_tech_test/lib/statement.rb": [
@@ -120,6 +127,6 @@
         null
       ]
     },
-    "timestamp": 1531901797
+    "timestamp": 1531903247
   }
 }

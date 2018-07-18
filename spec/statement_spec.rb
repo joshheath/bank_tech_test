@@ -2,7 +2,7 @@ require 'statement'
 require 'account'
 
 describe Statement do
-  date = Time.new(2018, 7, 16).strftime("%d/%m/%Y")
+  date = 16/7/2018
 
   it "adds transactions to the ledger" do
     subject.add({ date: date, credit: 1000, debit: 0, balance: 1000 })
