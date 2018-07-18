@@ -1,8 +1,8 @@
-# require_relative 'account'
-# require_relative 'printer'
+require_relative 'account'
+require_relative 'printer'
 
 class Statement
-  attr_reader :ledger, :balance, :statement
+  attr_accessor :ledger, :balance, :statement
 
   def initialize
     @ledger = []

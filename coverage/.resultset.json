@@ -60,8 +60,8 @@
         null
       ],
       "/Users/joshuaheath/Documents/Coding/week_10/bank_tech_test/lib/statement.rb": [
-        null,
-        null,
+        1,
+        1,
         null,
         1,
         1,
@@ -84,15 +84,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
         1,
         1,
         null,
@@ -107,7 +98,7 @@
         2,
         1,
         null,
-        1,
+        2,
         null,
         1,
         1,
@@ -129,6 +120,6 @@
         null
       ]
     },
-    "timestamp": 1531840840
+    "timestamp": 1531901797
   }
 }

@@ -8,15 +8,15 @@ class Account
     @balance = 0
     @date = Time.now.strftime("%d/%m/%Y")
     @statement = statement
-    @printer = Printer
+    @printer = printer
   end
 
-  def credit(date, amount)
+  def credit(amount)
     @balance += amount
     @statement.add({ date: @date, credit: amount, debit: 0, balance: @balance })
   end
 
-  def debit(date, amount)
+  def debit(amount)
     @balance -= amount
     @statement.add({ date: @date, credit: 0, debit: amount, balance: @balance })
   end
