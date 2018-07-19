@@ -19,7 +19,8 @@ class Account
 
   def debit(amount)
     @balance -= amount
-    @statement.add({ date: @date, credit: 0, debit: @printer.number_format(amount),
+    @statement.add({ date: @date, credit: 0, debit:
+      @printer.number_format(amount),
       balance: @printer.number_format(@balance) })
   end
 

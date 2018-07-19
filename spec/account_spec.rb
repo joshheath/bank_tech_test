@@ -3,7 +3,8 @@ require 'account'
 describe Account do
 
   let(:printer) { double :printer, print_statement:
-    "date || credit || debit || balance\n 18/07/2018 || 750.00 ||  || 750.00" }
+    "date || credit || debit || balance\n 18/07/2018 || 750.00 ||  || 750.00"
+  }
   let(:Account) { Account.new }
 
   it 'displays a starting balance of zero' do
