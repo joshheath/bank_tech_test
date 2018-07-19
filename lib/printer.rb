@@ -10,4 +10,9 @@ class Printer
       puts "#{entry[:date]} || #{entry[:credit]} || #{entry[:debit]} || #{entry[:balance]}\n"
     end
   end
+
+  def number_format(amount)
+    sprintf('%.2f', amount)
+  end
+
 end

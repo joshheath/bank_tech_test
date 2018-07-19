@@ -13,24 +13,17 @@ class Account
 
   def credit(amount)
     @balance += amount
-    @statement.add({ date: @date, credit: number_format(amount),
-      debit: 0, balance: number_format(@balance) })
+    @statement.add({ date: @date, credit: @printer.number_format(amount),
+      debit: 0, balance: @printer.number_format(@balance) })
   end
 
   def debit(amount)
     @balance -= amount
-    @statement.add({ date: @date, credit: 0, debit: number_format(amount),
-      balance: number_format(@balance) })
+    @statement.add({ date: @date, credit: 0, debit: @printer.number_format(amount),
+      balance: @printer.number_format(@balance) })
   end
 
   def produce_statement
     @printer.print(@statement.ledger)
   end
-
-  private
-
-  def number_format(amount)
-    sprintf('%.2f', amount)
-  end
-
 end
