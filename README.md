@@ -73,7 +73,8 @@ COVERAGE: 100.00% -- 67/67 lines in 6 files
   - `account.credit(100)`
   - `account.credit(750)`
   - `account.debit(500)`
-  - `account.produce_statement`
+  - `account.produce_statement`  
+  date || credit || debit || balance  
   18/07/2018 || 0 || 500.00 ||  350.00   
      18/07/2018 || 750.00 || 0 ||  850.00  
      18/07/2018 || 100.00 || 0 ||  100.00
