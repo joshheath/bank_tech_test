@@ -14,11 +14,12 @@ Acceptance criteria
 - And a withdrawal of 500 on 14-01-2012
 - When she prints her bank statement
 - Then she would see:
-
-> date || credit || debit || balance  
-> 14/01/2012 || || 500.00 || 2500.00  
-> 13/01/2012 || 2000.00 ||  || 3000.00  
-> 10/01/2012 || 1000.00 ||  || 1000.00
+```
+ date || credit || debit || balance  
+ 14/01/2012 || || 500.00 || 2500.00  
+ 13/01/2012 || 2000.00 ||  || 3000.00  
+ 10/01/2012 || 1000.00 ||  || 1000.00
+```
 
 ## User stories
 
@@ -68,6 +69,17 @@ COVERAGE: 100.00% -- 67/67 lines in 6 files
   - Install gems using `bundle install`
   - Open `irb`
   - Type `require './lib/account.rb'`
+  - `account = Account.new`
+  - `account.credit(100)`
+  - `account.credit(750)`
+  - `account.debit(500)`
+  - `account.produce_statement`
+  `18/07/2018 || 0 || 500.00 ||  350.00 
+     18/07/2018 || 750.00 || 0 ||  850.00  
+     18/07/2018 || 100.00 || 0 ||  100.00`
+  
+  
+  
 
 Below is a screenshot of the code running:
 
