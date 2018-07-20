@@ -14,14 +14,14 @@ class Account
 
   def credit(date = Time.now.format_date, amount)
     @balance += amount
-    @statement.add({ date: date, credit: @printer.number_format(amount),
-      debit: 0, balance: @printer.number_format(@balance) })
+    @statement.add({ date: date, credit: amount,
+      debit: 0, balance: @balance })
   end
 
   def debit(date = Time.now.format_date, amount)
     @balance -= amount
-    @statement.add({ date: date, credit: 0, debit: @printer.number_format(amount),
-      balance: @printer.number_format(@balance) })
+    @statement.add({ date: date, credit: 0, debit: amount,
+      balance: @balance })
   end
 
   def produce_statement

@@ -8,7 +8,8 @@ class Printer
   def print(ledger)
     p header
     ledger.reverse_each do |entry|
-      puts "#{entry[:date]} || #{entry[:credit]} || #{entry[:debit]} || #{entry[:balance]}\n"
+      # number_format(entry)
+      puts "#{entry[:date]} || #{entry[:credit]}.00 || #{entry[:debit]}.00 || #{entry[:balance]}.00\n"
     end
   end
 
