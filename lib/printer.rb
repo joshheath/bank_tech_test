@@ -17,7 +17,7 @@ class Printer
     %Q(date || credit || debit || balance)
   end
 
-  def number_format(amount)
-    sprintf('%.2f', amount)
-  end
+  # def number_format(amount)
+  #   sprintf('%.2f', amount)
+  # end
 end
